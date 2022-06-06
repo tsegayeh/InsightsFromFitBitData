@@ -16,7 +16,7 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 
 **_Analysis of the data._** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.  <br />
 
-**_Summary Findings:_**<br />
+#### Summary Findings: 
 **_Patterns Across Users._** <br />
 _a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
  19 users for 31 days,
@@ -38,7 +38,7 @@ _b) Measures vs. Attendance (Dates) Across Users._ Average values of the variabl
 
 **Correlation Between Variables.** Correlation was sought among the 5 of the variables - Steps, Distance, Intensity, Calories, and METs - excluding those variables with 24 or less users. Any pair of the variables has a positive correlation, with a correlation coefficient value of 0.6 or greater. Intensity, Distance and Steps each have a correlation coefficient of 0.6 with Calories while Distance and Steps have the strongest correlation, a correlation coefficient of 1. See chart on Tableau at: https://public.tableau.com/app/profile/tsegaye2291/viz/6_IntensityByDate/27_Corr-33users. For correlation among all the seven variables, including heart rate and sleep, see a Tableau chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/6_IntensityByDate/27_corr-14users
 
-### Insights and Recommendations
+#### Insights and Recommendations
 ###### (1) Analysis of the data indicated that the overall device usage by the users was intermittent and mostly incomplete. That may mean, either the fitness devices were unable to track and capture the full amount of data (all activities/variables, all days, all users). Or else, the users have not been fully performing.<br />
 >> **_Recommendation:_** Enhance Bellabeat App.  Bellabeat may increase user engagement in fitness activities. It takes a two-pronged strategy to achieve this. On the one hand, it would be necessary to make sure that all its tracking devices as well as the Bellabeat App are tracking and capturing the full data for all fitness activities. Reviewing its user data would be a good starting point. <br />
 On the other hand, Bellabeat may need to be more aggressive in reaching out to its users by improving its communication and feedback system, including: _Alerts_ – to remind users, e.g., starting times of fitness activities; _Notification_ – to notify performance status, e.g., attended or missed fitness activity; and _Feedback_ – to provide information on both performance and results of fitness activities, e.g., graphically, in a form of dashboard.
