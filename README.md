@@ -18,16 +18,16 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 **_a) Attendance._** To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
 <br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activity were tallied as follows:
-<br />
+<br /><br />
 Out of 33 users during a 31-day period, <br />
-19	users performed for 31 consecutive days <br />
- 4  users performed for 30 consecutive days <br />
- 1	  user performed for 29 consecutive days <br />
- 3	 users performed for 28 consecutive days <br />
- 2	 users performed for 26 consecutive days <br />
- 1	  user performed for 20 consecutive days <br />
- 2	 users performed for 18 consecutive days <br />
- 1   user performed for  4 consecutive days <br />  	   
+19	users performed for _31 consecutive days_ <br />
+ 4  users performed for _30 consecutive days_ <br />
+ 1	  user performed for _29 consecutive days_ <br />
+ 3	 users performed for _28 consecutive days_ <br />
+ 2	 users performed for _26 consecutive days_ <br />
+ 1	  user performed for _20 consecutive days_ <br />
+ 2	 users performed for _18 consecutive days_ <br />
+ 1   user performed for  _4 consecutive days_ <br />  	   
 <br />
 For the other three variables at the top of the chart (Heart rate, Sleep, Weight), the number of users dropped from 33 to 24 for Heart Rate, to 14 for Sleep, and to 8 for Weight. Yet, the performance or record of the activities for these users was mostly intermittent. <br />
 **_b) Measures vs. Attendance (Dates) Across Users._** Average values of the variables – Distance, Density, Intensity, Steps, Calories and METs – were plotted against the dates of activities for each user (see below). The peaks of the graph are associated with users who performed the activity on all or most of the days. However, this hasn’t always been true. For example, User ‘1927…. ’ with a 31-day performance scored the least value in terms of activity measures, whereas, user ‘4057…. ’  with only a four-day performance scored much higher than User ‘1927…. ’. Therefore, no consistent pattern of fitness activities measures was observed across the users. See chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_x/UserlyPattern. <br />
