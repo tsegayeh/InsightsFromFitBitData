@@ -9,7 +9,7 @@
 Users: overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. No description of the FitBit device users, such as sex and age, is provided.
   * Data type: Id columns in all the tables were in an integer format while the date columns in all the tables were in string format. Id was, therefore, changed to string format while date was changed to ‘date’ or ‘datetime’. To facilitate aggregation the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
   * Redundancy: Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
-  * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br /><br />
+  * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br />
 
 When necessary, the data were also aggregated by User, grouping the data by Id, to see patterns across the 33 users; by Date, grouping the data by Date, to see patterns across the 31 days; and by Hour, grouping the data by Hour of the day to see patterns across a 24-hour day.
 For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. <br />
