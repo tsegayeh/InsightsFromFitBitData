@@ -12,9 +12,7 @@ Users: overall, there are 33 users of fitness tracking devices in the dataset. H
   * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br /><br />
 When necessary, the data were also aggregated by User, grouping the data by Id, to see patterns across the 33 users; by Date, grouping the data by Date, to see patterns across the 31 days; and by Hour, grouping the data by Hour of the day to see patterns across a 24-hour day.
 For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. <br />
-**_Analysis of the data._** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.  <br />
 
-**_Business Question._** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br />
 **_Analysis of the data._** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.  <br />
 ### Summary Findings
 #### Patterns Across Users
