@@ -1,7 +1,7 @@
 ## Insights From FItBit Data to Inform Bellabeat Marketing Strategy
  (Capstone project for Google Data Analytics Certificate Program)
  
-### Business Question. 
+#### Business Question. 
 Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy.
 #### Preparing the data. 
 A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. 
@@ -12,23 +12,26 @@ The data were explored using the Excel, RStudio and Tableau software. Upon stori
 Users: overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. No description of the FitBit device users, such as sex and age, is provided.
   * Data type: Id columns in all the tables were in an integer format while the date columns in all the tables were in string format. Id was, therefore, changed to string format while date was changed to ‘date’ or ‘datetime’. To facilitate aggregation the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
   * Redundancy: Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
-  * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. 
+  * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br />
 When necessary, the data were also aggregated by User, grouping the data by Id, to see patterns across the 33 users; by Date, grouping the data by Date, to see patterns across the 31 days; and by Hour, grouping the data by Hour of the day to see patterns across a 24-hour day.
 For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. 
 #### Analysis of the data. 
 The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.
 #### Summary Findings
 ##### Patterns Across Users
-a) Attendance. To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following is the graphic representation of which day the user performed an activity. The white blank spots represent the days on which activity was not performed or recorded. Also see the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers.
+**a) Attendance.** To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
+<br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activity were tallied as follows:
-Total
-No. of Users:  	19	 4	1	3	2	1	2	1   	 33 users
-Days performed:	31	30	29	28 	26	20 	18	4     	 31 days
-   
+<br />
+No. of Users:  	19	 4	 1	 3	 2	 1	 2	1   	 (total 33 users)
+Days performed:	31	30	29	28 26	20 18	4    (total 31 days) 
+<br />
 For the other three variables at the top of the chart (Heart rate, Sleep, Weight), the number of users dropped dramatically:
-No. of Users:	33		24/33		14/33		8/33
-Total 		Heart Rate 	Sleep 		Weight
-Yet the performance or record of the activities for these users was mostly intermittent. 
+<br />
+No. of Users:	33		 24/33		     14/33	 	8/33
+           Total 		Heart Rate 	Sleep 		Weight
+           <br />
+Yet the performance or record of the activities for these users was mostly intermittent. <br />
 b) Measures vs. Attendance (Dates) Across Users. Average values of the variables – Distance, Density, Intensity, Steps, Calories and METs – were plotted against the dates of activities for each user (see below). Although the peaks of the graph are associated with the users who performed the activity on all or most days, this hasn’t always been true. For example, User ‘1927…. ’ with a 31-day performance scored the least in activity measures, whereas, user ‘4057…. ’  with only four days of performance scored much higher than User ‘1927…. ’. Therefore, no consistent pattern of fitness activities values was observed across the users. See chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_x/UserlyPattern.
 Patterns Across Days. When the average values of each variable were plotted against the dates, a distinct pattern was observed in that the highest values were recorded on April 30 for most variables while the lowest values were recorded on May 12. Although it is not clear why the values were highest on April 30, it is noticed that on May 12, a number of users have not performed the activities. Their data might not have been included since it is a cut-off date. See chart also at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_x/DailyPattern.
 Patterns Across Hours of a Day. A distinct pattern occurred when the average hourly data for Steps, Intensity, Calories and METs were plotted against the 24 hours of a day. Typically, fitness activity start peaking up around 4 AM in the morning and keep rising until it forms a peak between 12 AM and 2 PM. Then occurs a significant dip at 3 PM until it rises again and forms a second peak between 5 PM and 7 PM. Finally, it sharply declines until it tappers off at 3 AM. Also see chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_x/HourlyPatterns.
