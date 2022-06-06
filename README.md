@@ -8,8 +8,8 @@ Bellabeat, a small, successful high-tech manufacturer of health-focused products
 A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. 
 #### Processing the data.
 The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
--- Variables: Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
-Period covered: generally, the dataset covers a 31-day period, from April 12 to May 12, 2016.
+>> Variables: Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
+>> Period covered: generally, the dataset covers a 31-day period, from April 12 to May 12, 2016.
 Users: overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. No description of the FitBit device users, such as sex and age, is provided.
 Data type: Id columns in all the tables were in an integer format while the date columns in all the tables were in string format. Id was, therefore, changed to string format while date was changed to ‘date’ or ‘datetime’. To facilitate aggregation the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
 Redundancy: Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
