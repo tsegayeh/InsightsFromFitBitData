@@ -18,9 +18,7 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 
 #### Summary Findings
 **_Patterns Across Users:_** <br />
-_a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
-<br />
-As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
+_a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
  19 users for 31 days,
  4 users for 30 days,
  1 user  for 29 days,
