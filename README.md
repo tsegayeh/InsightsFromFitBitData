@@ -1,12 +1,9 @@
-## Insights From FItBit Data to Inform Bellabeat Marketing Strategy
+## Insights From FitBit Data to Inform Bellabeat Marketing Strategy
  (Capstone project for Google Data Analytics Certificate Program)
  
-#### Business Question. 
-Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy.
-#### Preparing the data. 
-A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. 
-#### Processing the data.
-The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
+**Business Question.** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy.
+**Preparing the data.** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. 
+**Processing the data.** The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
   * Variables: Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
   * Period covered: generally, the dataset covers a 31-day period, from April 12 to May 12, 2016.
 Users: overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. No description of the FitBit device users, such as sex and age, is provided.
@@ -15,10 +12,9 @@ Users: overall, there are 33 users of fitness tracking devices in the dataset. H
   * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br />
 When necessary, the data were also aggregated by User, grouping the data by Id, to see patterns across the 33 users; by Date, grouping the data by Date, to see patterns across the 31 days; and by Hour, grouping the data by Hour of the day to see patterns across a 24-hour day.
 For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. 
-#### Analysis of the data. 
-The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.
+**Analysis of the data.** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.
 #### Summary Findings
-##### Patterns Across Users
+##### <i> Patterns Across Users<i />
 **a) Attendance.** To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
 <br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activity were tallied as follows:
