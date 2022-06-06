@@ -1,5 +1,6 @@
 ## Insights From FitBit Data to Inform Bellabeat Marketing Strategy
  (Capstone project for Google Data Analytics Certificate Program)
+ _Tsegaye Himbego_
  
 **_Business Question._** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br /><br />
 **_Preparing the data._** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. <br /><br />
