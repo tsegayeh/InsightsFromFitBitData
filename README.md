@@ -1,4 +1,4 @@
-## Insights From FitBit Data to Inform Bellabeat Marketing Strategy
+## Insights from Fitbit user data to inform Bellabeat's marketing strategy
  (Capstone project for Google Data Analytics Certificate Program)<br />
  _Tsegaye Himbego_
  
