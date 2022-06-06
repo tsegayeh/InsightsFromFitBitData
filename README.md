@@ -16,7 +16,6 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 
 **_Analysis of the data._** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.  <br />
 
-
 #### Summary Findings
 **_Patterns Across Users:_** _a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
 <br />
@@ -34,12 +33,12 @@ For the other three variables at the top of the chart (Heart rate, Sleep, Weight
 **Correlation Between Variables.** Correlation was sought among the 5 of the variables - Steps, Distance, Intensity, Calories, and METs - excluding those variables with 24 or less users. Any pair of the variables has a positive correlation, with a correlation coefficient value of 0.6 or greater. Intensity, Distance and Steps each have a correlation coefficient of 0.6 with Calories while Distance and Steps have the strongest correlation, a correlation coefficient of 1. See chart on Tableau at: https://public.tableau.com/app/profile/tsegaye2291/viz/6_IntensityByDate/27_Corr-33users. For correlation among all the seven variables, including heart rate and sleep, see a Tableau chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/6_IntensityByDate/27_corr-14users
 ### Insights and Recommendations
 (1) Analysis of the data indicated that the overall device usage by the users was intermittent and mostly incomplete. That may mean, either the fitness devices were unable to track and capture the full amount of data (all activities/variables, all days, all users). Or else, the users have not been fully performing.<br />
-**_Recommendation:_** Enhance Bellabeat App.  Bellabeat may increase user engagement in fitness activities. It takes a two-pronged strategy to achieve this. On the one hand, it would be necessary to make sure that all its tracking devices as well as the Bellabeat App are tracking and capturing the full data for all fitness activities. Reviewing its user data would be a good starting point.
-On the other hand, Bellabeat may need to be more aggressive in reaching out to its users by improving its communication and feedback system, including: <br />
+**_Recommendation:_** Enhance Bellabeat App.  Bellabeat may increase user engagement in fitness activities. It takes a two-pronged strategy to achieve this. On the one hand, it would be necessary to make sure that all its tracking devices as well as the Bellabeat App are tracking and capturing the full data for all fitness activities. Reviewing its user data would be a good starting point. <br />
+On the other hand, Bellabeat may need to be more aggressive in reaching out to its users by improving its communication and feedback system, including: 
  
-     *   _Alerts_ – to remind users, e.g., starting times of fitness activities <br />
-     *   _Notification_ – to notify performance status, e.g., attended or missed fitness activity <br />
-     *   _Feedback_ – to provide information on both performance and results of fitness activities, e.g., graphically – in a form of dashboard
+     * _Alerts_ – to remind users, e.g., starting times of fitness activities <br />
+     * _Notification_ – to notify performance status, e.g., attended or missed fitness activity <br />
+     * _Feedback_ – to provide information on both performance and results of fitness activities, e.g., graphically – in a form of dashboard
  
 (2) The relationship between attendance and results has not been consistent across users. That is, users who regularly carried out a fitness activity did not always have a higher result for a given activity, and vice versa. For example, a user with only 4 days of activities had a result higher than some who performed the activity every single day for the whole 31-day period. This indicates that the rate of progress towards a fitness goal depends on the individual user.<br />
 **_Recommendation:_** Strengthen Bellabeat Membership. Usage data shows that the need for support is so variable among the users. Bellabeat, therefore, can strengthen its current membership service by adding member services that are customized to individual members. This could range from ordinary customer support service to an at-home gym with a Hi-Tech Mirror.<br /><br />
