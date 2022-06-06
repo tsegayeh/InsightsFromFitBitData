@@ -1,7 +1,7 @@
 ## Insights From FitBit Data to Inform Bellabeat Marketing Strategy
  (Capstone project for Google Data Analytics Certificate Program)
  
-<i />**Business Question.**<i /> Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br />
+<i> **Business Question.** <i /> Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br />
 **Preparing the data.** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. <br />
 **Processing the data.** The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
   * Variables: Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
