@@ -1,8 +1,8 @@
 ## Insights From FitBit Data to Inform Bellabeat Marketing Strategy
  (Capstone project for Google Data Analytics Certificate Program)
  
-**Business Question.** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy.
-**Preparing the data.** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. 
+**Business Question.** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br />
+**Preparing the data.** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. <br />
 **Processing the data.** The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
   * Variables: Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
   * Period covered: generally, the dataset covers a 31-day period, from April 12 to May 12, 2016.
@@ -11,7 +11,7 @@ Users: overall, there are 33 users of fitness tracking devices in the dataset. H
   * Redundancy: Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
   * Data Integrity: The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br />
 When necessary, the data were also aggregated by User, grouping the data by Id, to see patterns across the 33 users; by Date, grouping the data by Date, to see patterns across the 31 days; and by Hour, grouping the data by Hour of the day to see patterns across a 24-hour day.
-For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. 
+For categorical variables that are not quantitative, e.g., state of sleep, the category values were cross tabulated with the Id or Date variables and the frequency were used for analysis. <br />
 **Analysis of the data.** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely Steps, Distance, Intensity, Heart Rate, Sleep, Calories and Weight. A summary of the findings is presented in the following section.
 #### Summary Findings
 ##### <i> Patterns Across Users<i />
