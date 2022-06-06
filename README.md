@@ -19,12 +19,7 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 <br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activity were tallied as follows:
 <br />
-Total
-No. of Users:  	19	 4	1	3	2	1	2	1   	 33 users
-Days performed:	31	30	29	28 	26	20 	18	4     	 31 days
-   
-
-<p align="center"> Out of 33 users during a 31-day period, <br />
+<p align="left"> Out of 33 users during a 31-day period, <br />
 19	users performed for 31 consecutive days <br />
  4  users performed for 30 consecutive days <br />
  1	  user performed for 29 consecutive days <br />
