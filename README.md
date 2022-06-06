@@ -35,10 +35,9 @@ For the other three variables at the top of the chart (Heart rate, Sleep, Weight
 (1) Analysis of the data indicated that the overall device usage by the users was intermittent and mostly incomplete. That may mean, either the fitness devices were unable to track and capture the full amount of data (all activities/variables, all days, all users). Or else, the users have not been fully performing.<br />
 **_Recommendation:_** Enhance Bellabeat App.  Bellabeat may increase user engagement in fitness activities. It takes a two-pronged strategy to achieve this. On the one hand, it would be necessary to make sure that all its tracking devices as well as the Bellabeat App are tracking and capturing the full data for all fitness activities. Reviewing its user data would be a good starting point. <br />
 On the other hand, Bellabeat may need to be more aggressive in reaching out to its users by improving its communication and feedback system, including: 
- 
-     * _Alerts_ – to remind users, e.g., starting times of fitness activities <br />
-     * _Notification_ – to notify performance status, e.g., attended or missed fitness activity <br />
-     * _Feedback_ – to provide information on both performance and results of fitness activities, e.g., graphically – in a form of dashboard
+  * _Alerts_ – to remind users, e.g., starting times of fitness activities <br />
+  * _Notification_ – to notify performance status, e.g., attended or missed fitness activity <br />
+  * _Feedback_ – to provide information on both performance and results of fitness activities, e.g., graphically – in a form of dashboard
  
 (2) The relationship between attendance and results has not been consistent across users. That is, users who regularly carried out a fitness activity did not always have a higher result for a given activity, and vice versa. For example, a user with only 4 days of activities had a result higher than some who performed the activity every single day for the whole 31-day period. This indicates that the rate of progress towards a fitness goal depends on the individual user.<br />
 **_Recommendation:_** Strengthen Bellabeat Membership. Usage data shows that the need for support is so variable among the users. Bellabeat, therefore, can strengthen its current membership service by adding member services that are customized to individual members. This could range from ordinary customer support service to an at-home gym with a Hi-Tech Mirror.<br /><br />
