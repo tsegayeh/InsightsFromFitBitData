@@ -22,17 +22,15 @@ _a) Attendance._ To see the patterns of fitness activities of the tracking devic
 <br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
 <br />
-19 users for 31 days<br />
- 4 users for 30 days<br />
- 1 user  for 29 days<br />
- 3 users for 28 days<br />
- 2 users for 26 days<br />
- 1 user  for 20 days<br />
- 2 users for 18 days<br />
- 1 user  for  4 days<br />
-
-
- ![]("/UsersVsDates.PNG" width="80")  	   
+19 users for 31 days,
+ 4 users for 30 days,
+ 1 user  for 29 days,
+ 3 users for 28 days,
+ 2 users for 26 days,
+ 1 user  for 20 days,
+ 2 users for 18 days,
+ 1 user  for  4 days 
+<br />	   
  
 For the other three variables at the top of the chart (Heart rate, Sleep, Weight), the number of users dropped from 33 to 24 for Heart Rate, to 14 for Sleep, and to 8 for Weight. Yet, the performance or record of the activities for these users was mostly intermittent. <br /> <br />
 _b) Measures vs. Attendance (Dates) Across Users._ Average values of the variables – Distance, Density, Intensity, Steps, Calories and METs – were plotted against the dates of activities for each user (see below). The peaks of the graph are associated with users who performed the activity on all or most of the days. However, this hasn’t always been true. For example, User ‘1927…. ’ with a 31-day performance scored the least value in terms of activity measures, whereas, user ‘4057…. ’  with only a four-day performance scored much higher than User ‘1927…. ’. Therefore, no consistent pattern of fitness activities measures was observed across the users. See chart at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_x/UserlyPattern. <br />
