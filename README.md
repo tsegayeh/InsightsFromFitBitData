@@ -21,15 +21,14 @@ For categorical variables that are not quantitative, e.g., state of sleep, the c
 _a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. 
 <br />
 As it can be noticed, the bottom five variables in the chart (Distance, Intensity, Calories, Steps, METs) have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
-<br />
-19 users for 31 days,
+ 19 users for 31 days,
  4 users for 30 days,
  1 user  for 29 days,
  3 users for 28 days,
  2 users for 26 days,
  1 user  for 20 days,
  2 users for 18 days,
- 1 user  for  4 days 
+ 1 user  for  4 days.
 <br />	   
  
 For the other three variables at the top of the chart (Heart rate, Sleep, Weight), the number of users dropped from 33 to 24 for Heart Rate, to 14 for Sleep, and to 8 for Weight. Yet, the performance or record of the activities for these users was mostly intermittent. <br /> <br />
