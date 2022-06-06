@@ -40,6 +40,12 @@ For the other three variables at the top of the chart (Heart rate, Sleep, Weight
 ### Insights and Recommendations
 1)	Analysis of the data indicated that the overall device usage by the users was intermittent and mostly incomplete. That may mean, either the fitness devices were unable to track and capture the full amount of data (all activities/variables, all days, all users). Or else, the users have not been fully performing.
 Recommendation: Enhance Bellabeat App.  Bellabeat may increase user engagement in fitness activities. It takes a two-pronged strategy to achieve this. On the one hand, it would be necessary to make sure that all its tracking devices as well as the Bellabeat App are tracking and capturing the full data for all fitness activities. Reviewing its user data would be a good starting point.
+
+<pre>
+This        That        And             This
+That        This        And             That    
+</pre>
+
 On the other hand, Bellabeat may need to be more aggressive in reaching out to its users by improving its communication and feedback system, including: 
   >> - Alerts – to remind users, e.g., starting times of fitness activities
   >> - Notification – to notify performance status, e.g., attended or missed fitness activity 
