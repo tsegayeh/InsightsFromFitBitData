@@ -4,3 +4,5 @@ This data analysis project was completed on May 23, 2022 as a requirement for a 
 The layout of the follows the six stages of Google Data Analytics, namely _ASKING_ the business question, _PREPARING_ data, _PROCESSING,_ _ANALYZING,_ _SHARING_ findings, and taking _ACTION._
 #### Ask: Business Question
 The goal of the project is to gain insights from Fitbit's fitness data to inform Bellabeat's marketing strategy. Bellabeat is a small, successful high-tech manufacturer of health-focused products for women and would like to become a larger player in the global smart device market.
+#### Prepare
+A dataset of 18 tables of Fitbit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit, on April 14, 2022. 
