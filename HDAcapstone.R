@@ -1,6 +1,3 @@
-TimeBegining <- Sys.time()
-TimeBegining
-# -----------------------------------------------------------------
 #  Title: Insights From FitBit's FITNESS DATA To Inform Bellabeat's 
 #        Marketing Strategy: A Capstone Project
 # -----------------------------------------------------------------
@@ -117,34 +114,17 @@ head(e,2)
 #     for aggregation purposes, split the 'Time' column into
 #     'ActivityDate', 'HH:MM:SS', 'AM_PM':  
 
-timeDf_e1_begin <- Sys.time()
-timeDf_e1_begin
-
 # Step 1. split 'Time' into 'ActivityDate', 'HH:MM:SS', 'AM_PM':
 eNew <- separate(e, col=Time, into=c('ActivityDate', 'HH:MM:SS', 'AM_PM'), sep=' ')
 head(eNew,2)
 
-timeDf_e1_end <- Sys.time()
-timeDf_e1_end
-
-timeDf_e1_diff <- timeDf_e1_begin - timeDf_e1_end
-timeDf_e1_diff
-
 # Convert data type of ActivityDate column from character to date:
 eNew$ActivityDate <- as.Date(eNew$ActivityDate, format = "%m/%d/%Y")
-
-timeDf_e2_begin <- Sys.time()
-timeDf_e2_begin
 
 # For aggregation at hour level, and distinguish between am and pm, concatenate HH with AM_PM:
 # First, split 'HH:MM:SS' into 'HH', 'MM', 'SS' to isolate 'HH':
 e_hrlyfinal <- separate(eNew, col= 'HH:MM:SS', into=c('HH', 'MM', 'SS'), sep=':')
 head(e_hrlyfinal,2)
-
-timeDf_e2_end <- Sys.time()
-timeDf_e2_end
-
-timeDf_e2_diff <- timeDf_e2_begin - timeDf_e2_end
 
 # Now, concatenate HH and AM_PM to distinguish am vs pm:
 e_hrlyfinal$Hour <- paste(e_hrlyfinal$AM_PM, e_hrlyfinal$HH, sep = "-")
@@ -973,12 +953,4 @@ head(SleepAmtByDate,2)
 write.csv(SleepAmtByDate, "SleepAmtByDate.csv", row.names = FALSE)
 dfSleepAmtByDate <- read.csv("SleepAmtByDate.csv")
 head(dfSleepAmtByDate,2)
-# -----------------------------------------------------------------
-# 
-TimeEnd <- Sys.time()
-TimeEnd
-
-
-TimeBegining - TimeEnd
-
-# ------------------
+# END
