@@ -1,15 +1,14 @@
-#  Title: Insights From FitBit's FITNESS DATA To Inform Bellabeat's 
-#        Marketing Strategy: A Capstone Project
-# -----------------------------------------------------------------
-
-#[1] ASKING (Business Task): Gain insights from FitBit data
-#           to inform Bellabeat's marketing strategy 
+#     Title: Insights From FitBit's FITNESS DATA To Inform Bellabeat's Marketing Strategy: A Capstone Project
+# 
+#[1] ASKING (Business Task):
+#           Gain insights from FitBit data to inform Bellabeat's marketing strategy 
 
 #[2] PREPARATION
-#           A 18-table dataset was downloded from Kaggle website:
-#             https://www.kaggle.com/datasets/arashnic/fitbit. 
+#           A 18-table dataset was downloded from Kaggle website: https://www.kaggle.com/datasets/arashnic/fitbit. 
 
 #[3] PROCESSING
+#           Upon processing the 18 original tables, the resulting data frames are uploaded to this Github repository (i.e., "InsightsFromFitBitData".
+#           Those original tables are not uploaded to this repository because of size limit concers.
 
 #A. Install packages
 
