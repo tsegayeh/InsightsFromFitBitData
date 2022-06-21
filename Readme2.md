@@ -6,4 +6,4 @@ The goal of the project is to gain insights from Fitbit's fitness data to inform
 #### Prepare
 A dataset of 18 tables of Fitbit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit, on April 14, 2022. 
 #### Process
-Each of the 18 tables was was read into R programming software and reviewed. Tables that were selected for analysis were cleaned and processed. More tables were created as a result. 
+Each of the 18 tables was was read into R programming software and reviewed. Tables that were selected for analysis were cleaned and processed. More tables were created as a result. The list of original and created datasets is _shown <b> [here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/DataProcessing.PNG)<b />.
