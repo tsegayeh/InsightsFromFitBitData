@@ -1,6 +1,8 @@
 ## Insights From Fitbit Fitness Data
 ###### _Tsegaye Himbego_
+
 This data analysis project was completed on May 23, 2022 as a requirement for a _Google Data Analytics Certificate_ program offered by _Coursera_ through Futuro Health's _Healthcare Data Analytics_ training program. The layout of this report follows the six stages of Google Data Analytics, namely _Asking_ the business question, _Preparing,_ _Processing,_ and _Analyzing_data, _Sharing_ the findings, and taking _Action._
+
 #### Asking (Business Question)
 The goal of the project is to gain insights from Fitbit's fitness data to inform Bellabeat's marketing strategy. Bellabeat is a small, successful high-tech manufacturer of health-focused products for women and the company would like to become a larger player in the global smart device market.
 #### Preparation
@@ -14,19 +16,10 @@ Upon storing the data in Excel Workbook, each of the 18 tables was read into R. 
   * _Data type:_ _Id_ columns in all the tables were in integer format while the date and time columns were in _character_ format. _Id_ was, therefore, changed to _character_ or _factor_ format while date and time were changed to _‘date’_ data type. Also note that, to facilitate aggregation, the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
   * _Redundancy:_ Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
   * _Data Integrity:_ The sum of hourly and minutely amounts of _Calories, Intensity,_ and _Steps_ did not add up to the daily amounts. In such cases, the minute-level data were aggregated to hourly or daily levels. <br />
-  * For aggregation purposes, the data were also summarized by user, grouping by _Id_ to see patterns across the 33 users; by Date, grouping by _Date_ to see patterns across the 31 days; and by hour, grouping by _Hour_ of the day to see patterns across a 24-hour day.
-For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ in order that the frequencies could be used for analysis.
+  * For aggregation purposes, the data were also summarized by user, grouping by _Id_ to see patterns across the 33 users; by Date, grouping by _Date_ to see patterns across the 31 days; and by hour, grouping by _Hour_ of the day to see patterns across a 24-hour day. For categorical variables that are not quantitative, i.e., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ in order that the frequencies could be used for analysis.
+
 #### Analysis
-The data were analyzed primarily using the R and Tableau software. When necessary, the data were also aggregated by user, grouping the data by _Id_, to see patterns across the 33 users; by Date, grouping the data by _Date_, to see patterns across the 31 days; and by hour, grouping the data by _Hour_ of the day to see patterns across a 24-hour day.
-For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ variables and the frequency were used for analysis.
-
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-When necessary, the data were also aggregated by user, grouping the data by _Id_, to see patterns across the 33 users; by Date, grouping the data by _Date_, to see patterns across the 31 days; and by hour, grouping the data by _Hour_ of the day to see patterns across a 24-hour day.
-For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ variables and the frequency were used for analysis. <br /><br />
-
-**_Analysis of the data._** The data were analyzed using the R and Tableau software. Seven variables were involved in the analysis, namely _Steps, Distance, Intensity, Heart Rate, Sleep, Calories_ and _Weight._ A summary of the findings is presented in the following section.  <br />
-
+The data were analyzed primarily using the R and Tableau software. A total of 27 tables are used for analysis among which 7 are cleaned and and processed among the original tables where as 20 of the tables were created by agregating data by _user,_ to see patterns across the 33 users; by _date,_ to see patterns across the 31 days; and by _hour_ of the day to see patterns across a 24-hour day. 
 #### Summary Findings: 
 **_Patterns Across Users._** <br />
 _a) Attendance._ To see the patterns of fitness activities of the tracking device users, the dates of each activity (y-axis) are mapped against the user’s ID (x-axis) to create a Gantt chart. The dates ranged from April 12, 2016 to May 12, 2016 (bottom-up on y-axis). The following chart is a graphic representation of which day the user performed an activity on. The white, blank spots represent the days on which activity was not performed or recorded. See the chart on Tableau Public at: https://public.tableau.com/app/profile/tsegaye2291/viz/Summary_Patterns/DatesvsUsers. As it can be noticed, the bottom five variables in the chart _(Distance, Intensity, Calories, Steps, METs)_ have the same pattern with most days performed. More accurately, the number of days on which the users performed the fitness activities were tallied as follows:
