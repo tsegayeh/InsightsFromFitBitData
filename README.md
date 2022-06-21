@@ -1,30 +1,26 @@
 ## Insights From Fitbit Fitness Data
 ###### _Tsegaye Himbego_
-This data analysis project was completed on May 23, 2022 as a requirement for a Google Data Analytics Certificate program offered by Coursera through Futuro Health's Health Data Analytics program. The layout of the follows the six stages of Google Data Analytics, namely _Asking_ the business question, _Preparing_ data, _Processing,_ _Analyzing,_ _Sharing_ the findings, and taking _Action._
-#### Ask (Business Question)
-The goal of the project is to gain insights from Fitbit's fitness data to inform Bellabeat's marketing strategy. Bellabeat is a small, successful high-tech manufacturer of health-focused products for women and would like to become a larger player in the global smart device market.
-#### Prepare
-A dataset of 18 tables of Fitbit’s Fitness Tracker Data, in “.csv” format, was downloaded from [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit) website, on April 14, 2022. 
-#### Process
-Each of the 18 tables was read into R programming software and reviewed. Among the 18 original tables, _seven_ tables were selected for analysis and these were cleaned and processed, as a result of which _Twenty_ more tables were created. The list of original and created datasets is shown <b> [here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/DataProcessing.PNG)</b>. The complete, annotated code used to review and process the original data is found <b>[here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/HDAcapstone.R)</b>. Note, however, that the original dataset is not added to this repository and needs to be downloaded from the aforementioned [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit) website in order to reproduce the results with the code. 
-#### Analyze
+This data analysis project was completed on May 23, 2022 as a requirement for a _Google Data Analytics Certificate_ program offered by _Coursera_ through Futuro Health's _Healthcare Data Analytics_ training program. The layout of this report follows the six stages of Google Data Analytics, namely _Asking_ the business question, _Preparing,_ _Processing,_ and _Analyzing_data, _Sharing_ the findings, and taking _Action._
+#### Asking (Business Question)
+The goal of the project is to gain insights from Fitbit's fitness data to inform Bellabeat's marketing strategy. Bellabeat is a small, successful high-tech manufacturer of health-focused products for women and the company would like to become a larger player in the global smart device market.
+#### Preparation
+A dataset of 18 tables of Fitbit’s Fitness Tracker Data in “.csv” format, was downloaded from [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit) website, on April 14, 2022. 
+#### Processing
+Upon storing the data in Excel Workbook, each of the 18 tables was read into R. After exploring the data with Excel and R, _seven_ tables were selected for analysis and these were cleaned and processed, as a result of which _Twenty_ more tables were created. The list of the original as well as created datasets is shown <b> [here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/DataProcessing.PNG)</b>. The complete, annotated code used to explore and process the original data is found <b>[here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/HDAcapstone.R)</b>. Note, however, that the original dataset needs to be downloaded from the aforementioned [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit) website in order to reproduce the results with the code; it is not added to this repository.<br />
+##### _Highlights_ of exploration and processing:
+  * _Variables:_ Ten variables that are directly related to fitness activities were identifiable in the dataset, namely _Distance, Steps, Intensity, Calories, METs, Heart Rate, Sleep_ (state, duration, frequency), _Weight, Fat,_ and _BMI._ Some of these are recorded at _daily, hourly, minutely,_ or even at _seconds_ level.
+  * _Users:_ overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. For example, all the 33 users have their _Distance, Steps, Intensity, Calories, METs_ data recorded while 24 users have _Sleep._ records. Heart rate data is available only for 14 users while _Weight,_ and _Fat_ data are only available for 8 or less users and were not considered for analysis.  No description of the FitBit device users, such as sex and age, is provided.
+  * _Period covered:_ generally, the dataset covers a 31-day period, from April 12 to May 12, 2016. Some users have data covering for a periods as short as 4 days.
+  * _Data type:_ _Id_ columns in all the tables were in integer format while the date and time columns were in _character_ format. _Id_ was, therefore, changed to _character_ or _factor_ format while date and time were changed to _‘date’_ data type. Also note that, to facilitate aggregation, the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
+  * _Redundancy:_ Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
+  * _Data Integrity:_ The sum of hourly and minutely amounts of _Calories, Intensity,_ and _Steps_ did not add up to the daily amounts. In such cases, the minute-level data were aggregated to hourly or daily levels. <br />
+  * For aggregation purposes, the data were also summarized by user, grouping by _Id_ to see patterns across the 33 users; by Date, grouping by _Date_ to see patterns across the 31 days; and by hour, grouping by _Hour_ of the day to see patterns across a 24-hour day.
+For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ in order that the frequencies could be used for analysis.
+#### Analysis
+The data were analyzed primarily using the R and Tableau software. When necessary, the data were also aggregated by user, grouping the data by _Id_, to see patterns across the 33 users; by Date, grouping the data by _Date_, to see patterns across the 31 days; and by hour, grouping the data by _Hour_ of the day to see patterns across a 24-hour day.
+For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ variables and the frequency were used for analysis.
 
 -- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-## Insights from Fitbit user data to inform Bellabeat's marketing strategy
- (Capstone project for Google Data Analytics Certificate Program)<br />
- _Tsegaye Himbego_
- 
-**_Business Question._** Bellabeat, a small, successful high-tech manufacturer of health-focused products for women, would like to become a larger player in the global smart device market. Data from FitBit were, therefore, analyzed and insights gained were used as a basis to make recommendations for Bellabeat marketing strategy. <br /><br />
-**_Preparing the data._** A set of 18 tables of FitBit’s Fitness Tracker Data, in “.csv” format, was downloaded from Kaggle website, https://www.kaggle.com/datasets/arashnic/fitbit. <br /><br />
-**_Processing the data._** The data were explored using the Excel, RStudio and Tableau software. Upon storing the data in Excel Workbook, each table was read into R and Tableau for exploring and cleaning purposes. Installing the different R packages and libraries, each data frame was studied. The following were observed:
-  * _Variables:_ Ten variables that are directly related to fitness activities were identifiable in the dataset, namely Steps, Distance, Intensity, Calories, METs, Heart Rate, Sleep (state, duration, frequency), Weight, Fat, and BMI.
-  * _Period covered:_ generally, the dataset covers a 31-day period, from April 12 to May 12, 2016.
-Users: overall, there are 33 users of fitness tracking devices in the dataset. However, the number of users varies across activities. No description of the FitBit device users, such as sex and age, is provided.
-  * _Data type:_ Id columns in all the tables were in an integer format while the date columns in all the tables were in string format. Id was, therefore, changed to string format while date was changed to ‘date’ or ‘datetime’. To facilitate aggregation the minute-level and second-level data into hourly and daily levels, the date column was split into Date, AM/PM, Hour, and Minute columns.
-  * _Redundancy:_ Three of the tables, namely the Daily Calories, Daily intensities and Daily Steps were duplicates of the respective columns in the Daily Activities table. Therefore, these 3 tables were maintained instead of the said table.
-  * _Data Integrity:_ The sum of hourly and minutely amounts of Calories, Intensity, and Steps did not add up to the daily amounts. In that case, the minute-level data were aggregated to hourly or daily levels. <br />
 
 When necessary, the data were also aggregated by user, grouping the data by _Id_, to see patterns across the 33 users; by Date, grouping the data by _Date_, to see patterns across the 31 days; and by hour, grouping the data by _Hour_ of the day to see patterns across a 24-hour day.
 For categorical variables that are not quantitative, e.g., _state of sleep_, the category values were cross tabulated with the _Id_ or _Date_ variables and the frequency were used for analysis. <br /><br />
