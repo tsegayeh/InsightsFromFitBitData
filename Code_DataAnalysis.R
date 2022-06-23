@@ -10,36 +10,44 @@
 # install.packages("stringr")
 # install.packages("tidyr")
 
-# library(dplyr)
-# library(vtable)
-# library(tidyverse)
-# library(stringr)
-# library(tidyr)
+library(dplyr)
+library(vtable)
+library(tidyverse)
+library(stringr)
+library(tidyr)
 
 ## CLEANED, PROCESSED DATA: 
 
 # 1. Distance 
+distance <- read.csv("distance.csv")
 head(distance,2)
 
 # 2. Steps
+Steps <- read.csv("Steps.csv")
 head(Steps,2)
 
 # 3. Heart Rate
+HrtRate <- read.csv("HrtRate.csv")
 head(HrtRate,2)
 
 # 4. Calories
+Calories <- read.csv("Calories.csv")
 head(Calories,2)
 
 # 5. Intensity
+Intensity <- read.csv("Intensity.csv")
 head(Intensity,2)
 
 # 6. METs
+METs <- read.csv("METs.csv")
 head(METs,2)
 
 # 7. Sleep State
+SleepState <- read.csv("SleepState.csv")
 head(SleepState,2)
 
 # 8. Sleep Amount and Frequency
+SleepAmtFreq <- read.csv("SleepAmtFreq.csv")
 head(SleepAmtFreq,2) 
 
 # AGGREGATE DATA BY Id, Hour, and Date:
@@ -48,7 +56,7 @@ head(SleepAmtFreq,2)
 
 DistanceById <- distance %>% 
   group_by(Id) %>%
-  summarise(DistanceById = sum(round(TotalDistance))) # all the 31 days
+  summarise(Distance = sum(round(TotalDistance))) # all the 31 days
 head(DistanceById,2)
 
 write.csv(DistanceById, "DistanceById.csv", row.names = FALSE)
@@ -59,7 +67,7 @@ head(dfDistanceById,2)
 
 DistanceByDate <- distance %>%
   group_by(ActivityDate) %>%
-  summarise(DistanceByDate = sum(round(TotalDistance)))
+  summarise(Distance = sum(round(TotalDistance)))
 head(DistanceByDate,2)
 
 write.csv(DistanceByDate, "DistanceByDate.csv", row.names = FALSE)
@@ -70,7 +78,7 @@ head(dfDistanceByDate,2)
 
 stepsById <- Steps %>%
   group_by(Id) %>%
-  summarise(StepsById = round(sum(StepTotal))) # all the 31 days
+  summarise(Steps = round(sum(StepTotal))) # all the 31 days
 head(stepsById,2)
 
 write.csv(stepsById, "stepsById.csv", row.names = FALSE)
@@ -79,7 +87,7 @@ head(dfstepsById,2)
 
 stepsByHour <- Steps %>%
   group_by(Hour) %>%
-  summarise(StepsByHour = round(sum(StepTotal)))
+  summarise(Steps = round(sum(StepTotal)))
 head(stepsByHour,2)
 
 write.csv(stepsByHour, "stepsByHour.csv", row.names = FALSE)
@@ -88,7 +96,7 @@ head(dfstepsByHour,2)
 
 stepsByDate <- Steps %>%
   group_by(ActivityDate) %>%
-  summarise(StepsByDate = round(sum(StepTotal)))
+  summarise(Steps = round(sum(StepTotal)))
 head(stepsByDate,2)
 
 write.csv(stepsByDate, "stepsByDate.csv", row.names = FALSE)
@@ -99,8 +107,7 @@ head(dfstepsByDate,2)
 
 intensById <- Intensity %>%
   group_by(Id) %>%
-  summarise(TotInt = sum(TotalIntensity ),
-            AvgInt = sum(round(AverageIntensity))) # all the 31 days
+  summarise(Intensity = sum(TotalIntensity)) # all the 31 days
 head(intensById,2)
 
 write.csv(intensById, "intensById.csv", row.names = FALSE)
@@ -109,8 +116,7 @@ head(dfintensById,2)
 
 intensByHour <- Intensity %>%
   group_by(Hour) %>%
-  summarise(TotInt = sum(TotalIntensity),
-            AvgInt = sum(round(AverageIntensity)))
+  summarise(TotInt = sum(TotalIntensity))
 head(intensByHour,2)
 
 write.csv(intensByHour, "intensByHour.csv", row.names = FALSE)
@@ -119,8 +125,7 @@ head(dfintensById,2)
 
 intensByDate <- Intensity %>%
   group_by(Date) %>%
-  summarise(TotInt = sum(TotalIntensity),
-            AvgInt = sum(round(AverageIntensity)))
+  summarise(TotInt = sum(TotalIntensity))
 head(intensByDate,2)
 
 write.csv(intensByDate, "intensByDate.csv", row.names = FALSE)
@@ -161,7 +166,7 @@ head(dfhrtRateByDate,2)
 CaloriesById <- Calories %>%
   group_by(Id) %>%
   summarise(Calories = sum(Calories)) # All the 31 days
-head(CalorieById,2)
+head(CaloriesById,2)
 
 write.csv(CaloriesById, "CaloriesById.csv", row.names = FALSE)
 dfCaloriesById <- read.csv("CaloriesById.csv")
@@ -172,7 +177,7 @@ CaloriesByDate <- Calories %>%
   summarise(Calories = sum(Calories))
 head(CaloriesByDate,2)
 
-write.csv(CalorieByDate, "CaloriesByDate.csv", row.names = FALSE)
+write.csv(CaloriesByDate, "CaloriesByDate.csv", row.names = FALSE)
 dfCaloriesByDate <- read.csv("CaloriesByDate.csv")
 head(dfCaloriesByDate,2)
 
@@ -210,14 +215,14 @@ METsByHour <- METs %>%
   summarise(METs = sum(METs))
 tail(METsByHour,2)
 
-write.csv(METsByDate, "METsByHour.csv", row.names = FALSE)
+write.csv(METsByHour, "METsByHour.csv", row.names = FALSE)
 dfMETsByHour <- read.csv("METsByHour.csv")
 head(dfMETsByHour,2)
 
 # 7 --- sleep_state ---
 
 # Rename variable 'value' to 'sleepState'
-# SleepState <- rename(SleepState, 'sleepState' = 'value')
+SleepState <- rename(SleepState, 'sleepState' = 'value')
 
 # Rename levels (state ofsleep):
 SleepState$sleepState <- as.factor(SleepState$sleepState)
@@ -255,3 +260,36 @@ dfSleepAmtByDate <- read.csv("SleepAmtByDate.csv")
 head(dfSleepAmtByDate,2)
 hist(SleepAmtByDate$TotalMinutesAsleep)
 ## End 
+
+#   CORRELATIONS ---------------
+# Merging five data frames with equal length
+
+fitbit5Vars <- list(DistanceById, stepsById, CaloriesById,intensById, METsById) %>%
+  reduce(full_join, by = "Id")
+write.csv(fitbit5Vars, "fiveVarsByID.csv", row.names = FALSE)
+fiveVarsByID <- read.csv("fiveVarsByID.csv")
+head(fiveVarsByID,2)
+
+install.packages("cor_pmat")
+
+corr <- round(cor(fitbit5Vars[-c(1,6)]), 1)
+
+options( scipen = 999 )
+p.mat <-  cor_pmat(fitbit5Vars[-c(1,6)]) 
+
+head(p.mat)
+
+ggcorrplot(corr, hc.order = TRUE, type = "lower",
+           lab = TRUE)
+library(ggcorrplot)
+ggcorrplot(corr, hc.order =TRUE,
+           outline.color ="white")
+
+ggcorrplot(corr, hc.order = TRUE, type = "lower",
+           lab = TRUE)
+
+
+# Renaming labels in corrplot matrix
+
+rownames(corr) <- c("Distance",  "Steps", "Intensity",   "Calories",   "METs")
+colnames(corr) <- c("Distance",  "Steps", "Intensity",   "Calories",   "METs")
