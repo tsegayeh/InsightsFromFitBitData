@@ -9,12 +9,16 @@
 # install.packages("tidyverse")
 # install.packages("stringr")
 # install.packages("tidyr")
+# install.packages("cor_pmat")
+# install.packages(ggcorrplot)
 
 library(dplyr)
 library(vtable)
 library(tidyverse)
 library(stringr)
 library(tidyr)
+library(cor_pmat)
+library(ggcorrplot)
 
 ## CLEANED, PROCESSED DATA: 
 
@@ -262,7 +266,8 @@ hist(SleepAmtByDate$TotalMinutesAsleep)
 ## End 
 
 #   CORRELATIONS ---------------
-# Merging five data frames with equal length
+
+# First merging five data frames with equal length
 
 fitbit5Vars <- list(DistanceById, stepsById, CaloriesById,intensById, METsById) %>%
   reduce(full_join, by = "Id")
@@ -270,26 +275,13 @@ write.csv(fitbit5Vars, "fiveVarsByID.csv", row.names = FALSE)
 fiveVarsByID <- read.csv("fiveVarsByID.csv")
 head(fiveVarsByID,2)
 
-install.packages("cor_pmat")
-
-corr <- round(cor(fitbit5Vars[-c(1,6)]), 1)
-
+# See P matrix values
 options( scipen = 999 )
-p.mat <-  cor_pmat(fitbit5Vars[-c(1,6)]) 
-
+p.mat <-  cor_pmat(fitbit5Vars[-1]) 
 head(p.mat)
 
-ggcorrplot(corr, hc.order = TRUE, type = "lower",
+# Plot corr 
+corr <- round(cor(fitbit5Vars[-1]), 1)
+cor_fitbit5Vars <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
            lab = TRUE)
-library(ggcorrplot)
-ggcorrplot(corr, hc.order =TRUE,
-           outline.color ="white")
-
-ggcorrplot(corr, hc.order = TRUE, type = "lower",
-           lab = TRUE)
-
-
-# Renaming labels in corrplot matrix
-
-rownames(corr) <- c("Distance",  "Steps", "Intensity",   "Calories",   "METs")
-colnames(corr) <- c("Distance",  "Steps", "Intensity",   "Calories",   "METs")
+cor_fitbit5Vars
