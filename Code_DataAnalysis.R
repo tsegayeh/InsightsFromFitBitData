@@ -260,8 +260,6 @@ head(SleepAmtByDate,2)
 write.csv(SleepAmtByDate, "SleepAmtByDate.csv", row.names = FALSE)
 dfSleepAmtByDate <- read.csv("SleepAmtByDate.csv")
 head(dfSleepAmtByDate,2)
-hist(SleepAmtByDate$TotalMinutesAsleep)
-## End 
 
 #   CORRELATIONS ---------------
 #a) Five data frames with equal length (n=33)
@@ -278,7 +276,7 @@ options( scipen = 999 )
 p.mat <-  cor_pmat(fiveVarsByID[-1]) 
 head(p.mat)
 
-# Plot corr 
+# Compute correlations among the five vars
 corr <- round(cor(fiveVarsByID[-1]), 1)
 cor_fiveVarsByID <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
            lab = TRUE)
@@ -295,13 +293,14 @@ df7vars
 df7vars <- df7vars[-c(8,10)]
 df7vars
 
-write.csv(df7vars, "df7vars.csv", row.names = FALSE)
-df7vars <- read.csv("df7vars.csv")
-head(df7vars,2)
+write.csv(df7vars, "sevenVarsById.csv", row.names = FALSE)
+sevenVarsById <- read.csv("sevenVarsById.csv")
+head(sevenVarsById,2)
 
 # Compute correlations among the seven vars
-corr <- round(cor(df7vars[-1]), 1)
-cor_df7vars <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
+corr <- round(cor(sevenVarsById[-1]), 1)
+cor_sevenVarsById <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
                               lab = TRUE)
-cor_df7vars
+cor_sevenVarsById
 
+# END
