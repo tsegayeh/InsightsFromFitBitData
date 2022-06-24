@@ -113,7 +113,7 @@ head(e_hrlyfinal,2)
 # Now, concatenate HH and AM_PM to distinguish am vs pm:
 e_hrlyfinal$Hour <- paste(e_hrlyfinal$AM_PM, e_hrlyfinal$HH, sep = "-")
 
-# Add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 e_hrlyfinal$Hour <- recode_factor(e_hrlyfinal$Hour,
                                   "AM-12"="a-AM12",
                                   "AM-1"="b-AM1",
@@ -221,7 +221,7 @@ head(fNew,2)
 # Now, concatenate HH and AM_PM to make distinction between am and pm hours:
 fNew$Hour <- paste(fNew$AM_PM, fNew$HH, sep = "-")
 
-# Finally, add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Finally, add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 fNew$Hour <- recode_factor(fNew$Hour,
                            "AM-12"="a-AM12",
                            "AM-1"="b-AM1",
@@ -294,7 +294,7 @@ head(gNew,2)
 # Concatenate HH and AM_PM to to distinguish am vs pm:
 gNew$Hour <- paste(gNew$AM_PM, gNew$HH, sep = "-")
 
-# Add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 gNew$Hour <- recode_factor(gNew$Hour,
                            "AM-12"="a-AM12",
                            "AM-1"="b-AM1",
@@ -362,7 +362,7 @@ head(hNew,2)
 # Concatenate HH and AM_PM to to distinguish am vs pm:
 hNew$Hour <- paste(hNew$AM_PM, hNew$HH, sep = "-")
 
-# Now, add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Now, add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 
 hNew$Hour <- recode_factor(hNew$Hour,
                            "AM-12"="a-AM12",
@@ -506,7 +506,7 @@ head(mNew,2)
 # Concatenate HH and AM_PM to distinguish am vs pm:
 mNew$Hour <- paste(mNew$AM_PM, mNew$HH, sep = "-")
 
-# Add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 mNew$Hour <- recode_factor(mNew$Hour,
                            "AM-12"="a-AM12",
                            "AM-1"="b-AM1",
@@ -569,7 +569,7 @@ head(nNew,2)
 # Concatenate HH and AM_PM to distinguish am vs pm:
 nNew$Hour <- paste(nNew$AM_PM, nNew$HH, sep = "-")
 
-# Now, add alphabetic prefix (a to w) to maintain sequence of the 24 hours:
+# Now, add alphabetic prefix (a to x) to maintain sequence of the 24 hours:
 nNew$Hour <- recode_factor(nNew$Hour,
                            "AM-12"="a-AM12",
                            "AM-1"="b-AM1",
