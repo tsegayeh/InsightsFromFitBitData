@@ -9,7 +9,6 @@
 # install.packages("tidyverse")
 # install.packages("stringr")
 # install.packages("tidyr")
-# install.packages("cor_pmat")
 # install.packages(ggcorrplot)
 
 library(dplyr)
@@ -17,7 +16,6 @@ library(vtable)
 library(tidyverse)
 library(stringr)
 library(tidyr)
-library(cor_pmat)
 library(ggcorrplot)
 
 ## CLEANED, PROCESSED DATA: 
@@ -266,8 +264,8 @@ hist(SleepAmtByDate$TotalMinutesAsleep)
 ## End 
 
 #   CORRELATIONS ---------------
-
-# First merging five data frames with equal length
+#a) Five data frames with equal length (n=33)
+# First merging the 5 data frames 
 
 fitbit5Vars <- list(DistanceById, stepsById, CaloriesById,intensById, METsById) %>%
   reduce(full_join, by = "Id")
@@ -277,11 +275,33 @@ head(fiveVarsByID,2)
 
 # See P matrix values
 options( scipen = 999 )
-p.mat <-  cor_pmat(fitbit5Vars[-1]) 
+p.mat <-  cor_pmat(fiveVarsByID[-1]) 
 head(p.mat)
 
 # Plot corr 
-corr <- round(cor(fitbit5Vars[-1]), 1)
-cor_fitbit5Vars <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
+corr <- round(cor(fiveVarsByID[-1]), 1)
+cor_fiveVarsByID <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
            lab = TRUE)
-cor_fitbit5Vars
+cor_fiveVarsByID
+
+#b) Seven data frames including HrtRate (length n=24) and 
+#   SleepAmtFreq (length n=14)
+# Merge/join fitbit5Vars with HrtRate and SleepAmtFreq data frames 
+df6vars = fiveVarsByID %>% inner_join(dfhrtRateById,by="Id")
+df7vars = df6vars %>% inner_join(dfSleepAmtById,by="Id")
+df7vars
+
+#Only use  TotalMinutesAsleep from dfSleepAmtById
+df7vars <- df7vars[-c(8,10)]
+df7vars
+
+write.csv(df7vars, "df7vars.csv", row.names = FALSE)
+df7vars <- read.csv("df7vars.csv")
+head(df7vars,2)
+
+# Compute correlations among the seven vars
+corr <- round(cor(df7vars[-1]), 1)
+cor_df7vars <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
+                              lab = TRUE)
+cor_df7vars
+
