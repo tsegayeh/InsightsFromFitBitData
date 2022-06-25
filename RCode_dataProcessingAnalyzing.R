@@ -1,4 +1,4 @@
-begin <- Sys.time()
+ 
 # [3] Data Processing:
 
 #  (For [1] and [2], i.e., 'Asking' and 'Preparing', see the Readme page at 
@@ -664,7 +664,7 @@ unique(r$Id) # Only 8 users out of 33 have records.
 # *** data in this df is too small for analysis; it will be dropped. 
 
 
-## CLEAN, PROCESSED DATA: ##
+          ## CLEANED, PROCESSED DATA: ##
 
 # 1. Distance: extract the Distance column from df 'a' for analysis.
 # distance                        (not available at hourly level)
@@ -872,9 +872,6 @@ head(dfMETsByHour,2)
 
 # 7 --- sleep_state ---
 
-# Rename variable 'value' to 'sleepState'
-SleepState <- rename(SleepState, 'sleepState' = 'value')
-
 # Rename levels (state ofsleep):
 SleepState$sleepState <- as.factor(SleepState$sleepState)
 levels(SleepState$sleepState) <- c("asleep", "restless", "awake")
@@ -952,6 +949,4 @@ cor_sevenVarsById <- ggcorrplot(corr, hc.order = TRUE, type = "lower",
                                 lab = TRUE)
 cor_sevenVarsById
 
-end <- Sys.time()
-begin - end
 # END
