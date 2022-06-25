@@ -5,7 +5,7 @@ This data analysis project was completed on May 23, 2022 as a requirement for a 
 #### Asking (Business Question)
 The goal of the project is to gain insights from Fitbit's fitness data to inform Bellabeat's marketing strategy. Bellabeat is a small, successful high-tech manufacturer of health-focused products for women and the company would like to become a larger player in the global smart device market.
 #### Preparation
-A dataset of 18 tables of Fitbit’s Fitness Tracker Data in “.csv” format, was downloaded from <b> _[Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)_ </b> website, on April 14, 2022 and stored in a local machine.
+A dataset of 18-table of Fitbit’s Fitness Tracker Data in “.csv” format, was downloaded from <b> _[Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)_ </b> website, on April 14, 2022 and stored in a local machine.
 #### Processing
 The 18-tables dataset was read into R using RStudio. After exploring the data with Excel and R, _seven_ of the tables were selected for analysis and these were cleaned and processed, as a result of which _Twenty_ more tables were created. The complete, annotated R code used to explore and process the original data is found <b>[here](https://github.com/tsegayeh/InsightsFromFitBitData/blob/main/HDAcapstone.R)</b>. Note, however, that the original dataset needs to be downloaded from the aforementioned <b> _[Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)_ </b> website in order to reproduce the results with the code; it is not added to this repository.<br />
 ##### _Highlights_ of exploration and processing:
